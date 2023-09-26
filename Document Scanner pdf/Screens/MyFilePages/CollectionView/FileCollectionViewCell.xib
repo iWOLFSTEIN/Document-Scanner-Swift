@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FileCollectionViewCell" id="gTV-IL-0wX" customClass="FileCollectionViewCell" customModule="Document_Scanner_pdf" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 205" translatesAutoresizingMaskIntoConstraints="NO" id="CIt-WR-LzM">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="eup-ph-HuD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlI-iH-Znt">
+                        <rect key="frame" x="27.666666666666671" y="85" width="25" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="CAr-Cw-dnt"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="xwi-fp-LjZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 212" translatesAutoresizingMaskIntoConstraints="NO" id="dOv-t7-u3F">
+                        <rect key="frame" x="34" y="123" width="12" height="2"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmB-XW-oIX">
+                        <rect key="frame" x="22" y="104" width="36" height="12"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                        <color key="textColor" red="0.49019607843137253" green="0.64313725490196072" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="dOv-t7-u3F" firstAttribute="top" secondItem="MmB-XW-oIX" secondAttribute="bottom" constant="7" id="Qid-wK-OXW"/>
+                <constraint firstItem="GlI-iH-Znt" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="SIK-Li-CMR"/>
+                <constraint firstItem="CIt-WR-LzM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aBw-yf-TgP"/>
+                <constraint firstItem="MmB-XW-oIX" firstAttribute="top" secondItem="GlI-iH-Znt" secondAttribute="bottom" constant="4" id="kPu-Kf-7Pq"/>
+                <constraint firstItem="CIt-WR-LzM" firstAttribute="centerX" secondItem="GlI-iH-Znt" secondAttribute="centerX" id="kyg-gx-4Pt"/>
+                <constraint firstItem="GlI-iH-Znt" firstAttribute="top" secondItem="CIt-WR-LzM" secondAttribute="bottom" constant="10" id="mnf-iL-qK1"/>
+                <constraint firstItem="CIt-WR-LzM" firstAttribute="centerX" secondItem="MmB-XW-oIX" secondAttribute="centerX" id="p8B-5h-Lnr"/>
+                <constraint firstItem="CIt-WR-LzM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pa2-M6-Xwj"/>
+                <constraint firstItem="CIt-WR-LzM" firstAttribute="centerX" secondItem="dOv-t7-u3F" secondAttribute="centerX" id="q04-QV-nw0"/>
+            </constraints>
+            <connections>
+                <outlet property="fileIcon" destination="CIt-WR-LzM" id="IVl-eT-WA3"/>
+                <outlet property="moreInfoIcon" destination="dOv-t7-u3F" id="oUd-NR-mtr"/>
+                <outlet property="subTitle" destination="MmB-XW-oIX" id="nKu-5k-CE0"/>
+                <outlet property="title" destination="GlI-iH-Znt" id="I75-iU-yZ2"/>
+            </connections>
+            <point key="canvasLocation" x="127.69230769230769" y="20.616113744075829"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Group 205" width="91" height="87"/>
+        <image name="Group 212" width="12" height="2"/>
+    </resources>
+</document>
